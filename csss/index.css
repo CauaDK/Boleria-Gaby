@@ -1,0 +1,424 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ffdae7;
+}
+nav{
+    background: linear-gradient(rgba(0,0,0,0.4 ), rgba(0,0,0,0.4)), url(../img/fundo\ banner.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav .navigation-infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 15%;
+}
+nav .img-logo{
+    width: 15%;    
+}
+nav .img-logo img{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font: 600 20px "Poppins";
+    transition: 0.3s;
+    padding: 5px 10px;
+    position: relative;
+}
+nav ul li a:hover{
+    color: #ee1162;
+    letter-spacing: 2px;
+}
+nav .banner{
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+nav .banner h1{
+    color: #fab7d0;
+    font: 700 60px "Poppins";
+    text-align: center;
+}
+nav .banner h1 span{
+    color: #f35891;
+}
+nav .banner #seta-link{
+    width: 0;
+    height: 0;
+    border-top: 30px solid #f23d7f;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+nav .banner #seta-link:hover{
+    border-top: 30px solid #fab7d0;
+}
+
+
+
+
+
+main .container-sobre h1{
+    grid-area: title;
+}
+main .container-sobre p{
+    grid-area: texto;
+}
+main .container-sobre .container-slide{
+    grid-area: slide;
+}
+main .container-sobre{
+    display: grid;
+    padding: 10% 10% 8%;
+    grid-template: auto auto / 50% 50%;
+    grid-template-areas: 
+        "title slide"
+        "texto slide" 
+    ;
+    align-items: center;
+}
+main .container-sobre h1{
+    font: 700 40px "Poppins";
+    color: #ee1162;
+    text-align: center;
+}
+main .container-sobre p{
+    font: 400 20px "Poppins";
+    color: #242424;
+    text-align: justify;
+}
+main .container-sobre .container-slide:hover{
+    cursor: grab;
+}
+main .container-sobre .container-slide .box-slides{
+    overflow: hidden;
+    max-width: 400px;
+}
+main .container-sobre .container-slide .slide img{
+    width: 97%;
+    height: 360px;
+    object-fit: cover;
+    display: flex;
+    border: 4px solid #ee1162;
+    filter: brightness(85%);
+    border-radius: 20px;
+}
+.swiper-pagination{
+    --swiper-pagination-color: #ee1162;
+    --swiper-pagination-bottom: 10px;
+    --swiper-pagination-bullet-inactive-color: #f788b0;
+    --swiper-pagination-bullet-inactive-opacity: 0.7;
+}
+
+
+
+
+
+.box-divisao{
+    display: flex;
+}
+.box-divisao #div-left, .box-divisao #div-right{
+    background-color: #fab7d0;
+}
+.box-divisao #div-left{
+    height: 100px;
+    width: 50%;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+.box-divisao #div-right{
+    height: 100px;
+    width: 50%;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+main .container-bolos{
+    background: url(../img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fab7d0;
+    background-attachment: fixed;
+    padding: 4% 5%;
+}
+main .container-bolos h1{
+    text-align: center;
+    font: 700 40px "Poppins";
+    color: #ee1162;
+    margin-bottom: 2.5em;
+}
+main .container-bolos .box-bolos{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+main .container-bolos .box-bolos .bolo{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fab7d0;
+    position: relative;
+    transition: 0.2s;
+    margin-bottom: 5%;
+}
+main .container-bolos .box-bolos .bolo div{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container-bolos .box-bolos .bolo:hover div img{
+    filter: brightness(25%);
+}
+main .container-bolos .box-bolos .bolo:hover{
+    box-shadow: 0px 10px 10px #ee116270;
+}
+main .container-bolos .box-bolos .bolo:hover div span{
+    display: block;
+}
+main .container-bolos .box-bolos .bolo img{
+    width: 100%;
+    display: flex;
+    filter: brightness(85%);
+    transition: 0.3s;
+    object-fit: cover;
+    height: 350px;
+    border: 3px solid #ee1162;
+}
+main .container-bolos .box-bolos .bolo h2{
+    padding: 10px 20px 5px;
+    font: 600 25px "Poppins";
+    color: #ee1162;
+}
+main .container-bolos .box-bolos .bolo p{
+    padding: 0 20px;
+    font: 400 18px "Poppins";
+    color: #242424;
+    margin-bottom: 20px;
+}
+main .container-bolos .box-bolos .bolo p b{
+    font: 500 15px "Poppins";
+    color: #f23d7f;
+}
+main .container-bolos .box-bolos .bolo span{
+    padding: 10% 0;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    font: 500 18px "Poppins";
+    text-align: center;
+    display: none;
+}
+main .container-bolos .box-bolos .bolo svg{
+    position: absolute;
+    right: -4%;
+    bottom: -8%;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #f788b0;
+    padding: 3% 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .img-logo{
+    width: 20%;
+}
+footer .img-logo img{
+    width: 100%;
+}
+footer .navigation h2{
+    color: #ee1162;
+    font: 700 25px "Poppins";
+    margin-bottom: 10px;
+}
+footer .navigation .navigation-ops{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .navigation a{
+    text-decoration: none;
+    color: white;
+    font: 500 18px "Poppins";
+}
+footer .navigation a:hover{
+    color: #ffdae7;
+}
+
+/* BOTAO WHATSAPP */
+
+.float-bnt{
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    width: 4vw;
+}
+.float-bnt img{
+    width: 100%;
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes appear{
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes entry{
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+.container-sobre h1, .container-sobre .container-slide, .box-bolos .bolo{
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}  
+.banner{
+    animation: entry 1s linear;
+} 
+.container-sobre p{
+    animation: entry 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}  
+
+
+/* REPONSIVIDADE */
+@media (max-width: 1500px){
+    nav .banner{
+        margin: 15%;
+    }
+    main .container-bolos .box-bolos .bolo{
+        width: 30%;
+    }
+}
+@media (max-width: 750px){
+    nav .navigation-infos{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    nav .img-logo{
+        width: 50%;    
+    }
+    nav .banner{
+        margin-top: 50%;
+    }
+    nav .banner h1{
+        font-size: 35px;
+    }
+    main .container-bolos .box-bolos .bolo{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    main .container-sobre{
+        display: flex;
+        flex-direction: column;
+    }
+    main .container-sobre h1{
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+    main .container-sobre p{
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+    main .container-sobre .container-slide .box-slides{
+        max-width: 300px;
+    }
+    main .container-sobre .container-slide .slide img{
+        height: 260px;
+    }
+    main .container-bolos h1{
+        font-size: 30px;
+    }
+    footer .img-logo{
+        display: none;
+    }
+}
+@media (min-width: 751px) and (max-width: 1124px){
+    nav .navigation-infos{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    nav .img-logo{
+        width: 40%;    
+    }
+    nav .banner{
+        margin-top: 25%;
+    }
+    nav .banner h1{
+        font-size: 50px;
+    }
+    main .container-bolos .box-bolos .bolo{
+        width: 45%;
+        margin-bottom: 7%;
+    }
+    main .container-sobre{
+        display: flex;
+        flex-direction: column;
+    }
+    main .container-sobre h1{
+        margin-bottom: 15px;
+    }
+    main .container-sobre p{
+        margin-bottom: 20px;
+    }
+    main .container-sobre .container-slide .box-slides{
+        max-width: 400px;
+    }
+    main .container-sobre .container-slide .slide img{
+        height: 360px;
+    }
+    footer .img-logo{
+        display: none;
+    }
+}
